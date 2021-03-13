@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/HTC.UnityPlugin/ViveInputUtility/Examples/0.Tutorial/Tutorial.unity
+    guid: 62223332a39faa941b994704be3fb708
+  m_configObjects:
+    com.htc.upm.wave.xrsdk.xrsettings: {fileID: 11400000, guid: 338b183f20f2e9b47a061d236d4c75b0,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4f7cf26bfe45a9249b70a93416c682e8,
+      type: 2}
