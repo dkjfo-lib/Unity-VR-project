@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1029307930
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1029307931}
+  m_Layer: 0
+  m_Name: Cable Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1029307931
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1029307930}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.088, z: 0}
+  m_LocalScale: {x: 0.03094, y: 0.18379997, z: 0.03094}
+  m_Children: []
+  m_Father: {fileID: 9009785003738073903}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &75453445875436905
 GameObject:
   m_ObjectHideFlags: 0
@@ -11,7 +41,8 @@ GameObject:
   - component: {fileID: 7364557409970120191}
   - component: {fileID: 2502075199071824486}
   - component: {fileID: 7542589226618318521}
-  - component: {fileID: 5485487030758038141}
+  - component: {fileID: 6134507748142602762}
+  - component: {fileID: 1319651976}
   m_Layer: 0
   m_Name: Detector
   m_TagString: Untagged
@@ -27,8 +58,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 75453445875436905}
   m_LocalRotation: {x: 1, y: 0, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.32, y: 1.29, z: 1.4026}
+  m_LocalPosition: {x: 0, y: 0, z: 0.0039}
+  m_LocalScale: {x: 0.16, y: 0.19, z: 0.02}
   m_Children: []
   m_Father: {fileID: 9009785003738073903}
   m_RootOrder: 0
@@ -59,8 +90,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 29b14cf4189894a4eb6b66ce4c9ec156, type: 2}
-  - {fileID: 2100000, guid: 16e58087e8cae74458175a04c1e2f587, type: 2}
+  - {fileID: 2100000, guid: 041d9bdcafbd02b40946f96a381b16d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -81,7 +111,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &5485487030758038141
+--- !u!114 &6134507748142602762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 75453445875436905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079afddb0d7f05e40bcb44383f149949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Normal: {fileID: 2100000, guid: 29b14cf4189894a4eb6b66ce4c9ec156, type: 2}
+  Hovered: {fileID: 2100000, guid: 926919ce7f495aa44b10ce012bb13b43, type: 2}
+  Pressed: {fileID: 2100000, guid: 9cdad01e44871fc419f9f98ca8e08ec9, type: 2}
+  dragged: {fileID: 2100000, guid: 29b14cf4189894a4eb6b66ce4c9ec156, type: 2}
+  heighlightButton: 0
+--- !u!65 &1319651976
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,8 +139,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.07008483, y: 0.14368328, z: 0.01}
-  m_Center: {x: 0, y: 0, z: -0.0004716526}
+  m_Size: {x: 1, y: 1.0000004, z: 1.0000002}
+  m_Center: {x: 0, y: 0.00000047683716, z: 0}
 --- !u!1 &1533273863859174691
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,6 +172,7 @@ RectTransform:
   m_Children:
   - {fileID: 7364557409970120191}
   - {fileID: 6108678462730619619}
+  - {fileID: 1029307931}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -164,14 +212,14 @@ MonoBehaviour:
   posOffset: {x: 0, y: 0, z: 0}
   rotOffset: {x: 0, y: 0, z: 0}
   alignPosition: 0
-  alignRotation: 0
+  alignRotation: 1
   alignPositionOffset: {x: 0, y: 0, z: 0}
-  alignRotationOffset: {x: 0, y: 0, z: 0}
+  alignRotationOffset: {x: 90, y: 0, z: 0}
   m_followingDuration: 0.04
   m_overrideMaxAngularVelocity: 1
   m_unblockableGrab: 1
   m_primaryGrabButton: 0
-  m_secondaryGrabButton: 1
+  m_secondaryGrabButton: 4294967281
   m_grabButton: 0
   m_allowMultipleGrabbers: 1
   m_afterGrabbed:
@@ -188,8 +236,9 @@ MonoBehaviour:
   detectorDisplay: {fileID: 6678700255247652516}
   detectorValue: 0
   turnedOn: 0
-  targetButton: 3
+  targetButton: 2
   time2Switch: 3
+  timeHeld: 0
 --- !u!1 &2622036485700523418
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +372,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  m_Color: {r: 0.6698113, g: 0.635057, b: 0.635057, a: 1}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:

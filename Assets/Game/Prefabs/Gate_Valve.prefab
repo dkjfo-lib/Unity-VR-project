@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2363972040327465284}
   - component: {fileID: 5810941023676673967}
   - component: {fileID: 6040711861688149496}
+  - component: {fileID: 8557897276271922679}
   m_Layer: 0
   m_Name: Gate Valve
   m_TagString: Untagged
@@ -178,6 +179,7 @@ MonoBehaviour:
   valveRotation: 0
   canRotatePerSet: 90
   currentlyRotated: 0
+  initialDeltaDegrees: 0
   m_followingDuration: 0.04
   m_overrideMaxAngularVelocity: 1
   m_unblockableGrab: 1
@@ -199,6 +201,23 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4771217342608862564, guid: c1e420207580de141bc8aeee4be103c7, type: 3}
+--- !u!114 &8557897276271922679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3080979012035784496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 079afddb0d7f05e40bcb44383f149949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Normal: {fileID: 2100000, guid: 041d9bdcafbd02b40946f96a381b16d5, type: 2}
+  Hovered: {fileID: 2100000, guid: 38c5f53e7f1806a4a9fc159718f63db0, type: 2}
+  Pressed: {fileID: 2100000, guid: 9cdad01e44871fc419f9f98ca8e08ec9, type: 2}
+  dragged: {fileID: 2100000, guid: 926919ce7f495aa44b10ce012bb13b43, type: 2}
+  heighlightButton: 0
 --- !u!1 &8548997391721761998
 GameObject:
   m_ObjectHideFlags: 0
